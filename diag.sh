@@ -1,10 +1,8 @@
-echo '=== VM nameserver ==='
-grep nameserver /etc/resolv.conf
-echo '=== container resolv.conf ==='
-docker compose exec -T meminator cat /etc/resolv.conf
-echo '=== DNS test dans meminator: honeycomb ==='
+echo '=== hosts file dans meminator (doit contenir honeycomb et s3) ==='
+docker compose exec -T meminator grep -E 'honeycomb|s3' /etc/hosts
+echo '=== resolution honeycomb dans meminator ==='
 docker compose exec -T meminator getent hosts api.honeycomb.io
-echo '=== DNS test dans meminator: s3 ==='
+echo '=== resolution s3 dans meminator ==='
 docker compose exec -T meminator getent hosts random-pictures.s3.amazonaws.com
 echo '=== git ==='
 git log --oneline -1
