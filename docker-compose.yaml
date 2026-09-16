@@ -7,7 +7,7 @@ services:
         - OTEL_JAVA_AGENT_VERSION
     image: backend-for-frontend-java:latest
     dns:
-      - 8.8.8.8
+      - 168.63.129.16
       - 1.1.1.1
     ports:
       - "10115"
@@ -29,7 +29,7 @@ services:
         - OTEL_JAVA_AGENT_VERSION
     image: image-picker-java:latest
     dns:
-      - 8.8.8.8
+      - 168.63.129.16
       - 1.1.1.1
     ports:
       - "10116"
@@ -47,7 +47,7 @@ services:
         - OTEL_JAVA_AGENT_VERSION
     image: meminator-java:latest
     dns:
-      - 8.8.8.8
+      - 168.63.129.16
       - 1.1.1.1
     ports:
       - "10117"
@@ -64,7 +64,7 @@ services:
         - OTEL_JAVA_AGENT_VERSION
     image: phrase-picker-java:latest
     dns:
-      - 8.8.8.8
+      - 168.63.129.16
       - 1.1.1.1
     ports:
       - "10118"
