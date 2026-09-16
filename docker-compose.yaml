@@ -6,6 +6,9 @@ services:
       args:
         - OTEL_JAVA_AGENT_VERSION
     image: backend-for-frontend-java:latest
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     ports:
       - "10115"
     environment:
@@ -25,6 +28,9 @@ services:
       args:
         - OTEL_JAVA_AGENT_VERSION
     image: image-picker-java:latest
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     ports:
       - "10116"
     environment:
@@ -40,6 +46,9 @@ services:
       args:
         - OTEL_JAVA_AGENT_VERSION
     image: meminator-java:latest
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     ports:
       - "10117"
     environment:
@@ -54,6 +63,9 @@ services:
       args:
         - OTEL_JAVA_AGENT_VERSION
     image: phrase-picker-java:latest
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     ports:
       - "10118"
     environment:
